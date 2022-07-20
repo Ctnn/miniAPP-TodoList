@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React,{useState} from "react";
+import {Text,SafeAreaView,View,TextInput,TouchableOpacity} from 'react-native';
+import {appStyles as styles} from '../todo/styles';
+//SafeAreaView IOS SCREEN EDGE PROTECTION
 
-export default function App() {
+function App()
+{
+  const [getText,setText]=useState("");
+
+const handleAddTaskPress=()=>{
+  
+};
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={{flex:1}}>
+      <View style={styles.container}>
+        <Text style={styles.title}>My Tasks</Text>
+        <Text style={styles.subtitle} >Enter your tasks in the text box below and press the "Add" button to add.</Text>
+        <TextInput style={styles.input} 
+        placeholder="Enter your task here"
+        onChangeText={(value)=>{
+          setText(value); //value girilen değeri direkt bize veriyor
+        }}
+        
+        />
+        <TouchableOpacity style={styles.buttoncontainer}>
+          <Text style={styles.buttontext}>Add </Text>
+        </TouchableOpacity>
+      </View>
+      
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;

@@ -35,6 +35,33 @@ buttoncontainer:{
 },
 buttontext:{
     fontsize:18,
-}
+},
+divider:{
+    height:2,
+    backgroundColor:"#ddd",
+    marginVertical:32,
+},
+taskContainer:{
+    borderBottomWidth:1,
+    borderColor:"#ddd",
+    flexDirection:"row",
+    justifyContent:"space-between",
+    paddingVertical:12,
+},
+taskText:{
+    fontsize:18,
+},
+taskDelete:{
+    backgroundColor:"red",
+    width:23,
+    height:23,
+    borderRadius:13,
+    justifyContent:"center",
+    alignItems:"center",
+},
+taskDeleteText:{
+    fontSize:18,
+    color:"white",
+},
 
 });
